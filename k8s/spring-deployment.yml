@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-deployment
+spec:
+  replicas: 1  # 파드 수
+  strategy:
+    type: RollingUpdate  # 롤아웃 방식 적용
+  selector:
+    matchLabels:
+      app: spring
+  template:
+    metadata:
+      labels:
+        app: spring
+    spec:
+      containers:
+        - name: spring-container
+          image: morris235/spring-be:latest  # Docker Hub 이미지
+          ports:
+            - containerPort: 8080  # 내부에서 사용하는 포트
