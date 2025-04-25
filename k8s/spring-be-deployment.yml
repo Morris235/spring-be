@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-deployment
+  name: spring-be-deployment
 spec:
   replicas: 1  # 파드 수
   strategy:
