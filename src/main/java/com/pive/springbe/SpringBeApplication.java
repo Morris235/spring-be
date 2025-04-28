@@ -2,7 +2,7 @@ package com.pive.springbe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+// jenkins test
 @SpringBootApplication
 public class SpringBeApplication {
 
